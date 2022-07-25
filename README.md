@@ -1,7 +1,7 @@
-# Virtua Shopware App Logger
+# Virtua Shopware Basic App Logger
 
 ### Description
-This bundle contains fully functional logger for Shopware Applications.
+This bundle contains fully functional logger for Shopware Applications. The application meets the Shopware quality guidelines and places the logs in default Shopware log_entry entity.
 
 ------------
 
@@ -15,21 +15,21 @@ This bundle contains fully functional logger for Shopware Applications.
 ### Installation
 - Add bundle repository to composer.json
 ```json
-"virtua/shopware-app-logger-bundle": "^1.0"
+"virtua/shopware-basic-app-logger-bundle": "^1.0"
 ```
 - Add bundle to bundles.php
 ```php
-Virtua\ShopwareAppLoggerBundle\VirtuaShopwareAppLoggerBundle::class => ['all' => true]
+Virtua\ShopwareBasicAppLoggerBundle\ShopwareBasicAppLoggerBundle::class => ['all' => true]
 ```
 - Add bundle routes to routes.yaml
 ```yaml
 shopware_app_logger_bundle_routes:
-    resource: "@VirtuaShopwareAppLoggerBundle/Resources/config/routes.yaml"
+    resource: "@VirtuaShopwareBasicAppLoggerBundle/Resources/config/routes.yaml"
 ```
-- Create new file ```config/packages/virtua_shopware_app_logger.yaml```, with data:
+- Create new file ```config/packages/virtua_shopware_basic_app_logger.yaml```, with data:
 ```yaml
 imports:
-    - { resource: '@VirtuaShopwareAppLoggerBundle/Resources/config/config.yml' }
+    - { resource: '@VirtuaShopwareBasicAppLoggerBundle/Resources/config/config.yml' }
 ```
 - Run migrations ```bin/console doctrine:migrations:migrate```
 
@@ -42,8 +42,8 @@ This bundle is fully functional right after installation. To create new log, use
 
 Example log() usage:
 ```php
-use Virtua\ShopwareAppLoggerBundle\Service\Logger;
-use Virtua\ShopwareAppLoggerBundle\Util\LoggerData;
+use Virtua\ShopwareBasicAppLoggerBundle\Service\Logger;
+use Virtua\ShopwareBasicAppLoggerBundle\Util\LoggerData;
 
 /* ... */
 
@@ -57,25 +57,12 @@ public function __construct(Logger $logger)
 public function exampleFunction(): void
 {
 	$loggerData = new LoggerData($shopId);
-	$loggerData->setErrorMessage("Your error message");
-	$loggerData->setErrorCode(404);   //This is optional, default code is 400
-	$this->logger->log($loggerData);
+	$loggerData->setMessage("shopware.app.error"); //Use your appication name to identify error in logEntry
+	$loggerData->setLevel(404);   //This is optional, default code is 400
+	$loggerData->setContext('Your Error message', $errorData ); //errorData is optional parameter to pass additional error informations as array
+	$this->logger->log($loggerData);  
 }
 ```
 
 #####Reading
-Logs are displayed in **/logs/list/{shopId}** route, implemented in **AppLoggerController**
-To add this into menu in your Shopware, you need to add new **module** in your **app** **manifest**.
-
-Example module in manifest.xml:
-```xml
-<module name="logsModule"
-    source="https://your_app_url/logs/list"
-    parent="sw-extension"
-    position="50"
->
-    <label>Logs</label>
-    <label lang="de-DE">Logs</label>
-    <label lang="pl-PL">Logi</label>
-</module>
-```layed in **/logs/list/{shopId}** route, implemented in **AppLoggerController**
+Logs are displayed in Shopware entity log_entry, available in Administration->System->Event Logs
