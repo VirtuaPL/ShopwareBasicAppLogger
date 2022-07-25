@@ -65,4 +65,5 @@ public function exampleFunction(): void
 ```
 
 #####Reading
+
 Logs are displayed in Shopware entity log_entry, available in Administration->System->Event Logs
