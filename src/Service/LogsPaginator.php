@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Virtua\ShopwareAppLoggerBundle\Service;
+namespace Virtua\ShopwareBasicAppLoggerBundle\Service;
 
 use App\Repository\ImojeLogRepository;
 use App\Repository\ShopwareShopRepository;

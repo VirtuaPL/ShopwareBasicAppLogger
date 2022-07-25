@@ -1,2 +1,2 @@
 imports:
-  - { resource: '@VirtuaShopwareAppLoggerBundle/Resources/config/packages/*' }
+  - { resource: '@VirtuaShopwareBasicAppLoggerBundle/Resources/config/packages/*' }

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Virtua\ShopwareAppLoggerBundle\Exception;
+namespace Virtua\ShopwareBasicAppLoggerBundle\Exception;
 
 class ShopwareAppLoggerShopMissingException extends \Exception
 {

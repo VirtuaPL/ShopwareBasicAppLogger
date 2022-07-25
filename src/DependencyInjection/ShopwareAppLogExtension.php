@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Virtua\ShopwareAppLoggerBundle\DependencyInjection;
+namespace Virtua\ShopwareBasicAppLoggerBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;

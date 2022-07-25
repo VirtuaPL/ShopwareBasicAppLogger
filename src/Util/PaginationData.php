@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Virtua\ShopwareAppLoggerBundle\Util;
+namespace Virtua\ShopwareBasicAppLoggerBundle\Util;
 
 class PaginationData
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Virtua\ShopwareAppLoggerBundle\Controller;
+namespace Virtua\ShopwareBasicAppLoggerBundle\Controller;
 
 use App\Repository\ShopwareShopRepository;
 use Symfony\Component\HttpFoundation\Request;
