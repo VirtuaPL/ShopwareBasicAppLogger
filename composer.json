@@ -1,0 +1,24 @@
+{
+  "name": "virtua/shopware-app-logger-bundle",
+  "description": "Add basic logger for Shopware application",
+  "type": "symfony-bundle",
+  "version": "1.0.4",
+  "require": {
+    "php": ">=8.0",
+    "symfony/framework-bundle": "^6.0",
+    "symfony/twig-bundle": "^6.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Virtua\\ShopwareAppLoggerBundle\\": "src/"
+    }
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Virtua",
+      "email": "contact@wearevirtua.com"
+    }
+  ],
+  "minimum-stability": "stable"
+}

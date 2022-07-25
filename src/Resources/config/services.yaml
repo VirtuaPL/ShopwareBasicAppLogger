@@ -1,0 +1,14 @@
+services:
+  _defaults:
+    autowire: true      # Automatically injects dependencies in your services.
+    autoconfigure: true
+
+  Virtua\ShopwareAppLoggerBundle\:
+    resource: '../../'
+    exclude:
+      - '../src/DependencyInjection/'
+      - '../src/Entity/'
+      - '../src/Exception/'
+  Virtua\ShopwareAppLoggerBundle\Service\LogsPaginator:
+    arguments:
+      $logRepository: '@Virtua\ShopwareAppLoggerBundle\Repository\ShopwareAppLogRepository'

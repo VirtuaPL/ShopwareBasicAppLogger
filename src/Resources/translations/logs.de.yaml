@@ -1,0 +1,9 @@
+# translations/logs.de.yaml
+pageTitle: App Protokolle
+columnDate: Datum
+columnCode: Code
+columnMessage: Botschaft
+noLogs: Keine Protokolle gefunden
+error:
+  title: Etwas ist schief gelaufen
+  shopMissing: "Geschäft '%shop%' nicht gefunden"

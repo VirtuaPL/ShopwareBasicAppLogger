@@ -1,0 +1,9 @@
+# translations/logs.pl.yaml
+pageTitle: Logi aplikacji
+columnDate: Data
+columnCode: Kod błędu
+columnMessage: Wiadomość
+noLogs: Nie znaleziono żadnych logów
+error:
+  title: Coś poszło nie tak
+  shopMissing: "Sklep '%shop%' nie został znaleziony"

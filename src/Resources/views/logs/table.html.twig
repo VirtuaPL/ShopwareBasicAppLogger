@@ -1,0 +1,42 @@
+<div class="sw-data-grid is--compact sw-data-grid--actions">
+    <div class="sw-data-grid__wrapper"><!---->
+        <table class="sw-data-grid__table">
+            <thead class="sw-data-grid__header">
+            <tr class="sw-data-grid__row">
+                <th class="sw-data-grid__cell sw-data-grid__cell--header sw-data-grid__cell--property sw-data-grid__cell--sortable sw-data-grid__cell--0 sw-data-grid__cell--align-center links" style="width: auto; min-width: auto;">
+                    <a href="{{ pageUrl }}/{{ shopId }}/{{ language }}/{{ pagination.page }}/{{ order == 'DESC' ? 'ASC':'DESC' }}" class="sw-data-grid__cell-content">
+                        {{ translation.columnDate }} ({{ order }})
+                    </a>
+                </th>
+                <th class="sw-data-grid__cell sw-data-grid__cell--header sw-data-grid__cell--property sw-data-grid__cell--1 sw-data-grid__cell--align-center" style="width: auto; min-width: auto;">
+                    <div class="sw-data-grid__cell-content">
+                        {{ translation.columnCode }}
+                    </div>
+                </th>
+                <th class="sw-data-grid__cell sw-data-grid__cell--header sw-data-grid__cell--property sw-data-grid__cell--2 sw-data-grid__cell--align-center" style="width: 100%; min-width: auto;">
+                    <div class="sw-data-grid__cell-content">
+                        {{ translation.columnMessage }}
+                    </div>
+                </th>
+                <th class="sw-data-grid__cell" style="width: auto; min-width: auto;"></th>
+            </tr>
+            </thead>
+            <tbody class="sw-data-grid__body">
+            {% for log in logs %}
+                <tr class="sw-data-grid__row">
+                    <td class="sw-data-grid__cell sw-data-grid__cell--align-center">
+                        <div class="sw-data-grid__cell-content">{{ log.createdAt|date('d-m-Y H:i:s') }}</div>
+                    </td>
+                    <td class="sw-data-grid__cell sw-data-grid__cell--align-center">
+                        <div class="sw-data-grid__cell-content">{{ log.errorCode }}</div>
+                    </td>
+                    <td class="sw-data-grid__cell sw-data-grid__cell--align-center" style="padding: 0 0.5em;">
+                        <div class="">{{ log.errorMessage }}</div>
+                    </td>
+                    <td class="sw-data-grid__cell"></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+doctrine:
+  orm:
+    auto_mapping: true
+    mappings:
+      VirtuaShopwareAppLoggerBundle:
+        type: annotation
+        dir: Entity

@@ -1,0 +1,3 @@
+twig:
+  paths:
+    "%kernel.project_dir%/vendor/virtua/shopware-app-logger-bundle/src/Resources/views": ShopwareAppLogger

@@ -1,0 +1,21 @@
+Virtua\ShopwareAppLoggerBundle\Entity\ShopwareAppLog:
+  type: entity
+  table: shopware_app_log
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    errorCode:
+      type: integer
+      nullable: false
+    errorMessage:
+      type: string
+      nullable: false
+    createdAt:
+      type: datetime_immutable
+      nullable: false
+  manyToOne:
+    store:
+      target-entity: App\Entity\ShopwareShop

@@ -1,0 +1,9 @@
+# translations/logs.en.yaml
+pageTitle: App Logs
+columnDate: Date
+columnCode: Code
+columnMessage: Message
+noLogs: No logs found
+error:
+  title: Something went wrong
+  shopMissing: "Shop '%shop%' not found"
