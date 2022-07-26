@@ -6,7 +6,7 @@ namespace Virtua\ShopwareBasicAppLoggerBundle;
 
 use Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
-use Virtua\ShopwareAppLoggerBundle\DependencyInjection\ShopwareAppLogExtension;
+use Virtua\ShopwareBasicAppLoggerBundle\DependencyInjection\ShopwareAppLogExtension;
 
 class VirtuaShopwareAppLoggerBundle extends Bundle
 {
