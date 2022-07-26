@@ -2,7 +2,7 @@
   "name": "virtua/shopware-basic-app-logger-bundle",
   "description": "Add basic logger for Shopware application",
   "type": "symfony-bundle",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "require": {
     "php": ">=8.0",
     "symfony/framework-bundle": "^6.0",
